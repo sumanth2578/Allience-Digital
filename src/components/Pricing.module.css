@@ -1,0 +1,74 @@
+.pricing {
+    background: #000;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.card {
+    background: #09090b;
+    padding: 3rem;
+    border: 1px solid #18181b;
+    border-radius: 1.5rem;
+}
+
+.planName {
+    font-size: 0.9rem;
+    color: #71717a;
+    text-transform: none;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    font-size: 0.95rem;
+    color: #a1a1aa;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.check {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

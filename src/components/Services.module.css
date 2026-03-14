@@ -1,0 +1,99 @@
+.services {
+    background: #000;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 8rem;
+}
+
+.card {
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    color: var(--primary);
+}
+
+.card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.processList {
+    border-top: 1px solid #18181b;
+    margin-top: 4rem;
+}
+
+.processItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #18181b;
+}
+
+.processName {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.processNumber {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #52525b;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .processItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h2 {
+        font-size: 2rem;
+    }
+}

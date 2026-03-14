@@ -1,0 +1,170 @@
+.contact {
+    background: #000;
+    padding: 10rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: flex-start;
+}
+
+.info h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.info p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detailItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detailItem span {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.form {
+    padding: 0;
+    opacity: 1 !important;
+}
+
+.formTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.formScrollActive .formGroup {
+    animation: slideDown 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+/* Delay staggered animations for generic reveal-up parent */
+:global(.active) .formGroup {
+    animation: slideDown 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.formGroup:nth-child(1) { animation-delay: 0.1s; }
+.formGroup:nth-child(2) { animation-delay: 0.15s; }
+.formGroup:nth-child(3) { animation-delay: 0.2s; }
+.formGroup:nth-child(4) { animation-delay: 0.25s; }
+.formGroup:nth-child(5) { animation-delay: 0.3s; }
+.formGroup:nth-child(6) { animation-delay: 0.35s; }
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #a1a1aa;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #111;
+    border: 1px solid #27272a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: inherit;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.formGroup select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2371717a'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    cursor: pointer;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #52525b;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+    background: #18181b;
+}
+
+.submitBtn {
+    width: 100%;
+    background: #ffffff;
+    color: #000;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+    background: #e4e4e7;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

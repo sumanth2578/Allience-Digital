@@ -1,0 +1,72 @@
+.clients {
+    background: #000;
+    padding: 8rem 0;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.marqueeContainer {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.marqueeTrack {
+    display: flex;
+    width: max-content;
+    gap: 4rem;
+    animation: scroll 30s linear infinite;
+}
+
+.logoCard {
+    width: 180px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.clientLogo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: all 0.4s ease;
+}
+
+.logoCard:hover .clientLogo {
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move by the width of the original list of 5 items + their gaps */
+        /* Each card is 180px + 4rem (64px) gap = 244px */
+        /* 5 items * 244px = 1220px */
+        transform: translateX(-1220px);
+    }
+}
+
+@media (max-width: 768px) {
+    .logoCard {
+        width: 140px;
+        height: 80px;
+    }
+    
+    .marqueeTrack {
+        gap: 2rem;
+    }
+    
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-860px); } /* (140 + 32) * 5 */
+    }
+}

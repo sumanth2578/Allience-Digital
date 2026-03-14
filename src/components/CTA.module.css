@@ -1,0 +1,29 @@
+.cta {
+    background: #000;
+}
+
+.box {
+    padding: 10rem 2rem;
+    border: 1px solid #18181b;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.box h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.box p {
+    font-size: 1.5rem;
+    color: #71717a;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 6rem 1.5rem;
+    }
+}

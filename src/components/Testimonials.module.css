@@ -1,0 +1,69 @@
+.testimonials {
+    background: #000;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: none;
+}
+
+.header p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    background: #09090b;
+    padding: 3rem;
+    border: 1px solid #18181b;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    font-size: 1rem;
+    color: #a1a1aa;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+
+.author p {
+    font-size: 0.85rem;
+    color: #71717a;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,96 @@
+.footer {
+    padding: 8rem 0 4rem;
+    background: #000;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    gap: 4rem;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+}
+
+.mapContainer {
+    width: 100%;
+}
+
+.map {
+    filter: grayscale(1) invert(0.9) contrast(1.2);
+    border: 1px solid #18181b;
+    transition: filter 0.3s ease;
+}
+
+.map:hover {
+    filter: grayscale(0.2) invert(0.0) contrast(1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoImg {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.linkGroup {
+    display: flex;
+    gap: 6rem;
+}
+
+.links h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.links a {
+    font-size: 0.9rem;
+    color: #71717a;
+    display: block;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #ffffff;
+}
+
+.bottom {
+    padding-top: 4rem;
+    border-top: 1px solid #18181b;
+    color: #3f3f46;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    
+    .linkGroup {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .linkGroup {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
