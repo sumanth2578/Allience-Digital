@@ -15,18 +15,18 @@ const Footer = () => {
                     <div className={styles.linkGroup}>
                         <div className={styles.links}>
                             <h4>Services</h4>
-                            <Link href="#social">Social Media</Link>
-                            <Link href="#branding">Branding & Identity</Link>
-                            <Link href="#paid">Paid Advertising</Link>
+                            <Link href="/#social">Social Media</Link>
+                            <Link href="/#branding">Branding & Identity</Link>
+                            <Link href="/#paid">Paid Advertising</Link>
                         </div>
 
                         <div className={styles.links}>
                             <h4>Company</h4>
-                            <Link href="#clients">Work</Link>
-                            <Link href="#why-us">About</Link>
-                            <Link href="#testimonials">Testimonials</Link>
-                            <Link href="#pricing">Pricing</Link>
-                            <Link href="#contact">Contact</Link>
+                            <Link href="/#clients">Work</Link>
+                            <Link href="/#why-us">About</Link>
+                            <Link href="/#testimonials">Testimonials</Link>
+                            <Link href="/#pricing">Pricing</Link>
+                            <Link href="/contact">Contact</Link>
                         </div>
                     </div>
 

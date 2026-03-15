@@ -6,17 +6,17 @@ import styles from "./Pricing.module.css";
 const plans = [
     {
         name: "Starter Growth",
-        price: "$2,500",
+        price: "₹2,00,000",
         features: ["Strategy Session", "1 Campaign Launch", "Monthly Reporting"]
     },
     {
         name: "Growth Pro",
-        price: "$6,000",
+        price: "₹5,00,000",
         features: ["Growth Plan", "3 Campaigns", "Weekly Reporting"]
     },
     {
         name: "Brand Authority",
-        price: "$12,000",
+        price: "₹10,00,000",
         features: ["Custom Strategy", "5+ Campaigns", "Dedicated Manager"]
     }
 ];
@@ -46,7 +46,7 @@ const Pricing = () => {
                             </ul>
                             <div style={{ marginTop: '2.5rem' }}>
                                 <Link 
-                                    href="#contact" 
+                                    href="/contact" 
                                     className="btn-outline" 
                                     style={{ width: '100%', display: 'inline-block', textAlign: 'center', textDecoration: 'none' }}
                                 >

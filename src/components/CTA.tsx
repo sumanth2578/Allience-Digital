@@ -10,7 +10,7 @@ const CTA = () => {
                 <div className={`${styles.box} reveal-up`}>
                     <h2>Ready to Grow Your Brand Online?</h2>
                     <p>Book a Strategy Call.</p>
-                    <Link href="#contact" className="btn-primary" style={{ textDecoration: 'none' }}>
+                    <Link href="/contact" className="btn-primary" style={{ textDecoration: 'none' }}>
                         Get a Free Strategy Call
                     </Link>
                 </div>

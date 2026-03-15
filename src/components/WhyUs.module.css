@@ -1,5 +1,6 @@
 .whyUs {
     background: #000;
+    font-family: var(--font-outfit);
 }
 
 .layout {
@@ -30,10 +31,11 @@
     color: #fff;
 }
 
-.item p {
-    font-size: 0.85rem;
-    line-height: 1.6;
+.featureTitle {
+    font-size: 1.1rem;
+    font-weight: 800;
     color: #fff;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 

@@ -1,14 +1,15 @@
 :root {
-  --primary: #8b5cf6;
-  --primary-glow: rgba(139, 92, 246, 0.4);
-  --secondary: #d946ef;
+  --primary: #ffffff;
+  --primary-glow: rgba(255, 255, 255, 0.05);
+  --secondary: #27272a;
   --background: #000000;
   --foreground: #ffffff;
   --text-muted: #a1a1aa;
-  --primary: #ffffff;
-  --secondary: #27272a;
   --border: #27272a;
   --font-outfit: 'Outfit', sans-serif;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --radius: 0.85rem;
 }
 
 * {
@@ -30,32 +31,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Moving Grid Background */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  z-index: -10;
-  pointer-events: none;
-}
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
-button {
+button, .btn-primary, .btn-outline, [role="button"] {
   cursor: pointer;
   border: none;
   background: none;
   font-family: inherit;
+  border-radius: var(--radius);
+  box-shadow: none !important;
 }
 
 /* Scrollbar styling */
@@ -68,7 +55,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--primary), var(--secondary));
+  background: #3f3f46;
   border-radius: 10px;
   border: 3px solid var(--background);
 }
@@ -81,7 +68,7 @@ button {
 }
 
 .section {
-  padding: clamp(4rem, 10vw, 8rem) 0;
+  padding: clamp(3rem, 8vw, 6rem) 0;
 }
 
 .glass {
@@ -99,32 +86,37 @@ button {
 }
 
 .btn-primary {
-  color: white;
-  padding: 0.85rem 2rem;
-  border-radius: 9999px;
+  background: black !important;
+  color: white !important;
+  padding: 0.85rem 2.5rem;
+  border-radius: var(--radius) !important;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  box-shadow: 0 4px 20px var(--primary-glow);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none !important;
+  border: 1.5px solid white !important;
 }
 
 .btn-primary:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 8px 30px var(--primary-glow);
+  transform: translateY(-4px);
+  background: white !important;
+  color: black !important;
 }
 
 .btn-outline {
-  color: white;
-  padding: 0.85rem 2rem;
-  border-radius: 9999px;
+  color: white !important;
+  padding: 0.85rem 2.5rem;
+  border-radius: var(--radius) !important;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: transparent !important;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none !important;
 }
 
 .btn-outline:hover {
@@ -147,17 +139,36 @@ button {
 /* Reveal Animations */
 [class*="reveal-"] {
   opacity: 0;
-  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 2.2s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: transform, opacity;
 }
 
-.reveal-up { transform: translateY(40px); }
-.reveal-down { transform: translateY(-40px); }
-.reveal-left { transform: translateX(-40px); }
-.reveal-right { transform: translateX(40px); }
+.reveal-up { transform: translateY(80px) scale(0.97); }
+.reveal-down { transform: translateY(-80px) scale(0.97); }
+.reveal-left { transform: translateX(-120px) scale(0.97); }
+.reveal-right { transform: translateX(120px) scale(0.97); }
 
 [class*="reveal-"].active {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translate(0, 0) scale(1);
+}
+
+@media (max-width: 1024px) {
+  .reveal-up { transform: translateY(50px) scale(0.98); }
+  .reveal-down { transform: translateY(-50px) scale(0.98); }
+  .reveal-left { transform: translateX(-60px) scale(0.98); }
+  .reveal-right { transform: translateX(60px) scale(0.98); }
+}
+
+@media (max-width: 768px) {
+  .reveal-up { transform: translateY(30px) scale(0.99); }
+  .reveal-down { transform: translateY(-30px) scale(0.99); }
+  .reveal-left { transform: translateX(-30px) scale(0.99); }
+  .reveal-right { transform: translateX(30px) scale(0.99); }
+  
+  .container {
+    width: 92%;
+  }
 }
 
 /* Stagger Delays */

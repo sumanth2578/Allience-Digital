@@ -2,12 +2,12 @@ import styles from "./WhyUs.module.css";
 import Image from "next/image";
 
 const features = [
-    "EXPERTISE & EXPERIENCE: A MULTIDISCIPLINARY TEAM OF CREATIVE AND TECHNICAL SPECIALISTS DELIVERING INDUSTRY-PROVEN SOLUTIONS.",
-    "RELIABILITY & TRUST: A DEPENDABLE PARTNER COMMITTED TO TIMELY DELIVERY AND CONSISTENT QUALITY.",
-    "24/7 SUPPORT: ALWAYS ACCESSIBLE, ENSURING CONTINUOUS ASSISTANCE WHENEVER IT'S NEEDED.",
-    "TAILORED SOLUTIONS: CUSTOMIZED STRATEGIES DESIGNED TO MATCH EACH BUSINESS'S UNIQUE GOALS AND CHALLENGES.",
-    "RESULTS-DRIVEN APPROACH: FOCUSED ON MEASURABLE OUTCOMES THAT TRANSLATE INTO REAL GROWTH AND ROI.",
-    "COMPREHENSIVE SERVICES: END-TO-END SOLUTIONS COVERING CONTENT, TECHNOLOGY, AND MARKETING UNDER ONE ROOF."
+    "EXPERTISE & EXPERIENCE",
+    "RELIABILITY & TRUST",
+    "24/7 SUPPORT",
+    "TAILORED SOLUTIONS",
+    "RESULTS-DRIVEN APPROACH",
+    "COMPREHENSIVE SERVICES"
 ];
 
 const WhyUs = () => {
@@ -21,13 +21,12 @@ const WhyUs = () => {
                         </div>
                         <ul className={styles.list}>
                             {features.map((feature, index) => {
-                                const [title, description] = feature.split(": ");
                                 return (
                                     <li key={index} className={`reveal-left delay-${index + 1}`}>
                                         <div className={styles.item}>
                                             <span className={styles.dot}>•</span>
-                                            <p>
-                                                <strong>{title}:</strong> {description}
+                                            <p className={styles.featureTitle}>
+                                                {feature}
                                             </p>
                                         </div>
                                     </li>
@@ -37,7 +36,7 @@ const WhyUs = () => {
                     </div>
                     <div className={`${styles.imageWrapper} reveal-right delay-2`}>
                         <Image 
-                            src="/growth.png" 
+                            src="/Screenshot 2026-03-15 190819.png" 
                             alt="Brand Growth" 
                             width={1200}
                             height={800}

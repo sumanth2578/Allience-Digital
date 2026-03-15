@@ -15,21 +15,21 @@ const Hero = () => {
                         strategy, content, and digital marketing.
                     </p>
                     <div className={`${styles.cta} reveal-up delay-2`}>
-                        <Link href="#contact" className="btn-primary" style={{ textDecoration: 'none' }}>
+                        <Link href="/contact" className="btn-primary" style={{ textDecoration: 'none' }}>
                             Get a Free Strategy Call
                         </Link>
                     </div>
 
-                    <div className={`${styles.stats} reveal-up delay-3`}>
-                        <div className={styles.statItem}>
+                    <div className={styles.stats}>
+                        <div className={`${styles.statItem} reveal-left delay-3`}>
                             <h3>50+</h3>
                             <span>Campaign Strategies</span>
                         </div>
-                        <div className={styles.statItem}>
+                        <div className={`${styles.statItem} reveal-left delay-4`}>
                             <h3>100K+</h3>
                             <span>Social Media Reach</span>
                         </div>
-                        <div className={styles.statItem}>
+                        <div className={`${styles.statItem} reveal-left delay-5`}>
                             <h3>90%</h3>
                             <span>Client Retention</span>
                         </div>

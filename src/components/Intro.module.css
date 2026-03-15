@@ -135,29 +135,39 @@
     margin: 0 auto;
 }
 
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .linkGroup {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
 @media (max-width: 768px) {
     .logoContainer {
-        width: 160px;
-        height: 80px;
+        width: 140px;
+        height: 70px;
     }
 
-    .part1 { transform: translateX(-80px) rotate(-10deg) scale(0.7); }
-    .part3 { transform: translateX(80px) rotate(10deg) scale(0.7); }
-    .part2 { transform: translateY(40px) scale(0.5); }
+    .part1 { transform: translateX(-60px) rotate(-10deg) scale(0.6); }
+    .part3 { transform: translateX(60px) rotate(10deg) scale(0.6); }
+    .part2 { transform: translateY(30px) scale(0.4); }
 
     .flare {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
     .contentUp {
-        transform: translateY(-30px);
+        transform: translateY(-20px);
     }
 
     .subtitle {
-        letter-spacing: 0.15em;
-        font-size: 0.7rem;
-        padding: 0 1rem;
+        letter-spacing: 0.1em;
+        font-size: 0.65rem;
+        padding: 0 1.5rem;
     }
 }
 

@@ -10,7 +10,7 @@
 
 .navbarActive {
     background: rgba(0, 0, 0, 0.9);
-    padding: 1rem 0;
+    padding: 0.8rem 0;
 }
 
 .navContainer {
@@ -22,12 +22,15 @@
 .logo {
     display: flex;
     align-items: center;
+    border: none !important;
+    padding: 0 !important;
 }
 
 .logoImg {
     height: 45px;
     width: auto;
     object-fit: contain;
+    border-radius: var(--radius) !important;
 }
 
 .navLinks {

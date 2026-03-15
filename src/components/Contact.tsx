@@ -16,10 +16,10 @@ const Contact = () => {
                                 <span>Surya Towers, Izzathnagar, Shilpa Hills, Hyderabad</span>
                             </div>
                             <div className={styles.detailItem}>
-                                <span>hello@alliencedigital.com</span>
+                                <span>info@alliencedigitalmarketing.in</span>
                             </div>
                             <div className={styles.detailItem}>
-                                <span>+91 999 000 0000</span>
+                                <span>+91 8106992027</span>
                             </div>
                         </div>
                     </div>

@@ -24,6 +24,9 @@ const Services = () => {
     return (
         <section id="services" className={`section ${styles.services}`}>
             <div className="container">
+                <div className={`${styles.header} reveal-up`}>
+                    <h2 className="section-title">OUR SERVICES</h2>
+                </div>
                 <div className={styles.grid}>
                     {services.map((item, index) => (
                         <div key={index} className={`${styles.card} reveal-up delay-${(index % 4) + 1}`}>

@@ -45,7 +45,9 @@ const Intro: React.FC<IntroProps> = ({ onComplete }) => {
 
                                     setTimeout(() => {
                                         setIsExiting(true);
-                                        setTimeout(onComplete, 1200);
+                                        setTimeout(() => {
+                                            onComplete();
+                                        }, 1200);
                                     }, 1000);
                                 }
                             }, 30);

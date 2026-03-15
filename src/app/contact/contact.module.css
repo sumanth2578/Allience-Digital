@@ -1,0 +1,8 @@
+.main {
+    background: #000;
+    min-height: 100vh;
+}
+
+.content {
+    padding-top: 80px; /* Offset for fix navbar */
+}

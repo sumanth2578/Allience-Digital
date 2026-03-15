@@ -5,7 +5,7 @@
 .box {
     padding: 10rem 2rem;
     border: 1px solid #18181b;
-    border-radius: 2rem;
+    border-radius: var(--radius);
     text-align: center;
 }
 

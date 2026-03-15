@@ -1,13 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Services from "@/components/Services";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Intro from "@/components/Intro";
 import { useScrollReveal } from "@/components/useScrollReveal";
@@ -18,6 +16,15 @@ import CTA from "@/components/CTA";
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
   useScrollReveal();
+
+  useEffect(() => {
+    // Only skip intro if deep-linking to a specific section (has hash)
+    const hasHash = window.location.hash;
+
+    if (hasHash) {
+      setShowIntro(false);
+    }
+  }, []);
 
   return (
     <>
@@ -31,7 +38,6 @@ export default function Home() {
         <Testimonials />
         <Pricing />
         <CTA />
-        <Contact />
         <Footer />
       </main>
     </>

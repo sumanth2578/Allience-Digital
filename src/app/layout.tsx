@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
+import AmbientBackground from "@/components/AmbientBackground";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -23,7 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable}`}>
+      <body className={`${outfit.className}`}>
+        <AmbientBackground />
         <Cursor />
         {children}
       </body>

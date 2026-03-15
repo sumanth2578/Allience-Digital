@@ -21,18 +21,18 @@ const Navbar = () => {
     return (
         <nav className={`${styles.navbar} ${scrolled ? styles.navbarActive : ""} ${menuOpen ? styles.menuOpen : ""}`}>
             <div className={`container ${styles.navContainer}`}>
-                <Link href="#hero" className={styles.logo}>
+                <Link href="/" className={styles.logo}>
                     <img src="/logo.jpg" alt="Allience Digital" className={styles.logoImg} />
                 </Link>
 
                 <div className={`${styles.navLinks} ${menuOpen ? styles.navLinksActive : ""}`}>
-                    <Link href="#services" onClick={() => setMenuOpen(false)}>Services</Link>
-                    <Link href="#clients" onClick={() => setMenuOpen(false)}>Work</Link>
-                    <Link href="#why-us" onClick={() => setMenuOpen(false)}>About</Link>
-                    <Link href="#testimonials" onClick={() => setMenuOpen(false)}>Testimonials</Link>
-                    <Link href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
-                    <Link href="#contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-                    <Link href="#contact" className="btn-outline" style={{ textDecoration: 'none' }} onClick={() => setMenuOpen(false)}>
+                    <Link href="/#services" onClick={() => setMenuOpen(false)}>Services</Link>
+                    <Link href="/#clients" onClick={() => setMenuOpen(false)}>Work</Link>
+                    <Link href="/#why-us" onClick={() => setMenuOpen(false)}>About</Link>
+                    <Link href="/#testimonials" onClick={() => setMenuOpen(false)}>Testimonials</Link>
+                    <Link href="/#pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
+                    <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+                    <Link href="/contact" className="btn-primary" style={{ textDecoration: 'none' }} onClick={() => setMenuOpen(false)}>
                         Get a Free Strategy Call
                     </Link>
                 </div>

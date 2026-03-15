@@ -31,7 +31,7 @@
     background: #09090b;
     padding: 3rem;
     border: 1px solid #18181b;
-    border-radius: 1.5rem;
+    border-radius: var(--radius);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,8 +62,19 @@
     color: #71717a;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+    
+    .card {
+        padding: 2rem;
     }
 }
