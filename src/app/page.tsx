@@ -10,7 +10,6 @@ import Footer from "@/components/Footer";
 import Intro from "@/components/Intro";
 import { useScrollReveal } from "@/components/useScrollReveal";
 import WhyUs from "@/components/WhyUs";
-import Pricing from "@/components/Pricing";
 import CTA from "@/components/CTA";
 
 export default function Home() {
@@ -36,7 +35,6 @@ export default function Home() {
         <Clients />
         <WhyUs />
         <Testimonials />
-        <Pricing />
         <CTA />
         <Footer />
       </main>

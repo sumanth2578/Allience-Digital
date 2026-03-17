@@ -52,7 +52,6 @@ const Navbar = () => {
                     <Link href="/#clients" onClick={() => setMenuOpen(false)}>Work</Link>
                     <Link href="/#why-us" onClick={() => setMenuOpen(false)}>About</Link>
                     <Link href="/#testimonials" onClick={() => setMenuOpen(false)}>Testimonials</Link>
-                    <Link href="/#pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
                     <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
                     
                     {deferredPrompt && (
