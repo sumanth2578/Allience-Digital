@@ -7,16 +7,38 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
+        
+        const handleBeforeInstallPrompt = (e: any) => {
+            e.preventDefault();
+            setDeferredPrompt(e);
+        };
+
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+        };
     }, []);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
+
+    const handleInstall = async () => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                setDeferredPrompt(null);
+            }
+        }
+    };
 
     return (
         <nav className={`${styles.navbar} ${scrolled ? styles.navbarActive : ""} ${menuOpen ? styles.menuOpen : ""}`}>
@@ -32,6 +54,13 @@ const Navbar = () => {
                     <Link href="/#testimonials" onClick={() => setMenuOpen(false)}>Testimonials</Link>
                     <Link href="/#pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
                     <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+                    
+                    {deferredPrompt && (
+                        <button className={styles.installBtn} onClick={handleInstall}>
+                            <span>Download App</span>
+                        </button>
+                    )}
+
                     <Link href="/contact" className="btn-primary" style={{ textDecoration: 'none' }} onClick={() => setMenuOpen(false)}>
                         Get a Free Strategy Call
                     </Link>

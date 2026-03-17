@@ -61,14 +61,20 @@
         gap: 2rem;
     }
     
-    .processItem {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+    .processHeader {
+        gap: 1rem;
     }
 
-    .processNumber {
-        order: -1;
+    .processTitleGroup {
+        gap: 1rem;
+    }
+
+    .processName {
+        font-size: 1rem;
+    }
+
+    .processContent p {
+        font-size: 0.95rem;
     }
 }
 
