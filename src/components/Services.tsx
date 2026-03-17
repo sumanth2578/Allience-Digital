@@ -79,7 +79,9 @@ const Services = () => {
                             </div>
                             
                             <div className={`${styles.processContent} ${expandedIndex === index ? styles.show : ""}`}>
-                                <p>{item.content}</p>
+                                <div className={styles.contentInner}>
+                                    <p>{item.content}</p>
+                                </div>
                             </div>
                         </div>
                     ))}
