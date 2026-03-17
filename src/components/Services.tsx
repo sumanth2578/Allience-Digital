@@ -65,7 +65,7 @@ const Services = () => {
                     {processData.map((item, index) => (
                         <div 
                             key={index} 
-                            className={`${styles.processItem} ${expandedIndex === index ? styles.active : ""} reveal-up`}
+                            className={`${styles.processItem} ${expandedIndex === index ? styles.active : ""}`}
                             onClick={() => toggleAccordion(index)}
                         >
                             <div className={styles.processHeader}>
