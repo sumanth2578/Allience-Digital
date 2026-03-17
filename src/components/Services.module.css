@@ -100,11 +100,17 @@
     flex-direction: column;
 }
 
-.processName {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ffffff;
-    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+.processHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.processTitleGroup {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .processItem:hover .processName {
@@ -112,8 +118,56 @@
     transform: translateX(10px);
 }
 
+.processName {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.plusButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+}
+
+.active .plusButton {
+    background: #fff;
+    color: #000;
+}
+
 .processNumber {
     font-size: 1rem;
     font-weight: 500;
     color: #52525b;
+}
+
+.processContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 100%;
+}
+
+.processContent.show {
+    max-height: 400px;
+}
+
+.contentInner {
+    padding: 1.5rem 0 0.5rem 0;
+    max-width: 800px;
+}
+
+.processContent p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
 }
