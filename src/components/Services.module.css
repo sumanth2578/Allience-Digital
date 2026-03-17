@@ -92,17 +92,24 @@
 }
 
 .processItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 1.5rem 0;
     border-bottom: 1px solid #18181b;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .processName {
     font-size: 1.1rem;
     font-weight: 600;
     color: #ffffff;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.processItem:hover .processName {
+    color: var(--primary);
+    transform: translateX(10px);
 }
 
 .processNumber {
