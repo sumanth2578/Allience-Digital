@@ -4,7 +4,7 @@ const feedbacks = [
     {
         name: "E. Carter",
         role: "Startup CEO",
-        content: "Working with Allience Digital made all the difference—amazing growth, creative campaigns."
+        content: "Working with Alliance Digital made all the difference—amazing growth, creative campaigns."
     },
     {
         name: "J. Patel",

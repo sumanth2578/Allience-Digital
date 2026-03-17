@@ -10,7 +10,7 @@ const Hero = () => {
                         We Build Brands That <br /> Grow Online.
                     </h1>
                     <p className={`${styles.subtitle} reveal-up delay-1`}>
-                        Allience Digital helps businesses transform their online 
+                        Alliance Digital helps businesses transform their online 
                         presence into a powerful growth engine through 
                         strategy, content, and digital marketing.
                     </p>

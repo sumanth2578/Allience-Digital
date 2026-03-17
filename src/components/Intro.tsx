@@ -14,8 +14,8 @@ const Intro: React.FC<IntroProps> = ({ onComplete }) => {
     const [titleText, setTitleText] = useState("");
     const [subtitleText, setSubtitleText] = useState("");
 
-    const fullTitle = "ALLIENCE DIGITAL";
-    const fullSubtitle = "Marketing becomes easy with ALLIENCE";
+    const fullTitle = "ALLIANCE DIGITAL";
+    const fullSubtitle = "Marketing becomes easy with ALLIANCE";
 
     useEffect(() => {
         // Step 1: Assemble logo parts (1s)

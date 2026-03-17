@@ -16,7 +16,7 @@ const Contact = () => {
                                 <span>Surya Towers, Izzathnagar, Shilpa Hills, Hyderabad</span>
                             </div>
                             <div className={styles.detailItem}>
-                                <span>info@alliencedigitalmarketing.in</span>
+                                <span>info@alliancedigitalmarketing.in</span>
                             </div>
                             <div className={styles.detailItem}>
                                 <span>+91 8106992027</span>

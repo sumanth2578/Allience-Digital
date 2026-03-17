@@ -10,8 +10,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Allience Digital | Premier Digital Marketing Agency",
-  description: "Elevate your brand with Allience Digital. We provide cutting-edge digital marketing solutions to help you grow.",
+  title: "Alliance Digital | Growth Marketing Agency",
+  description: "Alliance Digital helps brands grow through cinematic storytelling and elite digital marketing strategy.",
   icons: {
     icon: "/logo.jpg",
   },

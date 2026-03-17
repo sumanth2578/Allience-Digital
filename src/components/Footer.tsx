@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className={styles.grid}>
                     <div className={styles.brand}>
                         <Link href="#hero" className={styles.logo}>
-                            <img src="/logo.jpg" alt="Allience Digital" className={styles.logoImg} />
+                            <img src="/logo.jpg" alt="Alliance Digital" className={styles.logoImg} />
                         </Link>
                     </div>
 
@@ -45,7 +45,7 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.bottom}>
-                    <p>&copy; {new Date().getFullYear()} Allience Digital. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Alliance Digital. All rights reserved.</p>
                     <div className={styles.socials}>
                         {/* Add social icons here if needed */}
                     </div>

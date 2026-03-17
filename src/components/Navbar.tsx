@@ -22,7 +22,7 @@ const Navbar = () => {
         <nav className={`${styles.navbar} ${scrolled ? styles.navbarActive : ""} ${menuOpen ? styles.menuOpen : ""}`}>
             <div className={`container ${styles.navContainer}`}>
                 <Link href="/" className={styles.logo}>
-                    <img src="/logo.jpg" alt="Allience Digital" className={styles.logoImg} />
+                    <img src="/logo.jpg" alt="Alliance Digital" className={styles.logoImg} />
                 </Link>
 
                 <div className={`${styles.navLinks} ${menuOpen ? styles.navLinksActive : ""}`}>

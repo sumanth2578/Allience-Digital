@@ -17,7 +17,7 @@ const About = () => {
                     </div>
                     <h2>We bridge the gap between <span className="gradient-text">Brands and People</span></h2>
                     <p>
-                        At Allience Digital, we believe in the power of connection. Founded in 2020, we&apos;ve helped hundreds of businesses navigate the complex digital landscape with precision and creativity.
+                        At Alliance Digital, we believe in the power of connection. Founded in 2020, we&apos;ve helped hundreds of businesses navigate the complex digital landscape with precision and creativity.
                     </p>
 
                     <div className={styles.stats}>
